@@ -24,13 +24,13 @@
 
 ### 테스트 실행
 1. 터미널 1에서 8000번 포트를 열어서 텍스트를 받을 준비
-    - nc -l 8000
+    - `nc -l 8000`
 2. 터미널 2에서 예제 실행
-    - flink-1.20.0/bin/flink run flink-1.20.0/examples/streaming/SocketWindowWordCount.jar --hostname localhost --port 8000
+    - `flink-1.20.0/bin/flink run flink-1.20.0/examples/streaming/SocketWindowWordCount.jar --hostname localhost --port 8000`
 3. 웹 UI에서 TaskManager Stdout 실시간 확인
     - 또는 터미널에서 확인
-        - cd flink-1.20.0/
-        - tail -f log/flink-*.out
+        - `cd flink-1.20.0/`
+        - `tail -f log/flink-*.out`
         - `tail`: 파일 마지막 부분 출력
         - `-f`: 파일 변경사항을 실시간으로 추적하며 출력
         - `log/flink-*.out`: Flink 로그 파일 전체 지정 (`standalonesession`, `taskexecutor` 등 포함)
